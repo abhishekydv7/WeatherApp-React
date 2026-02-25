@@ -13,7 +13,7 @@ function App() {
   console.log("Weather key is:", import.meta.env.VITE_WEATHER_KEY);
   const search = evt => {
     if(evt.key === "Enter") {
-      fetch(`${api.base}weather?q=${query}&units=metric&APPID=${api.key}`)
+      fetch(`${api.base}weather?q=${query}&units=metric&appid=${api.key}`)
         .then(res => res.json())
         .then(result => {
           setWeather(result);
